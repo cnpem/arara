@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./app
+    container_name: backend
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./app:/app
+      - ${BASE_DIR}:${BASE_DIR}
+
+  frontend:
+    build:
+      context: ./image-viewer-web
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./image-viewer-web:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
