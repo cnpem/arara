@@ -1,0 +1,10 @@
+Flask==2.2.3
+Flask-Cors==5.0.0
+pip==22.0.2
+podman-compose==1.2.0
+pycryptodome==3.17
+urllib3==1.26.5
+Werkzeug==2.2.2
+WTForms==3.1.2
+numpy==2.1.2
+flask_wtf==1.2.1
